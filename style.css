@@ -19,6 +19,10 @@ body {
     border-bottom: 1px solid black;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
 }
 
 .navbar__s1__title {
@@ -33,6 +37,7 @@ body {
     width: 60%;
     gap: 10px;
     align-items: center;
+    background-color: transparent;
 }
 
 .navbar__s2 input {
@@ -49,6 +54,21 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.mylearning {
+    position: relative;
+}
+
+.mylearning__purchases {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    right: 0px;
+    top: 150%;
+    width: 100px;
+    display: none;
+    border: 1px solid black;
 }
 
 .categories {
@@ -84,39 +104,22 @@ body {
 .sale-image img {
     width: 100%;
     position: relative;
-    z-index: 1;
-}
-
-.recommended {
-    padding: 10px;
-}
-
-.recommended__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 10px;
-    gap: 10px;
 }
 
 .sale-image__offer {
+    width: 35%;
+    padding: 20px;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid black;
     left: 100px;
     top: 100px;
-    background-color: white;
-    color: black;
-    padding: 30px;
-    width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 2;
     animation-name: sale-offer-offer;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     opacity: 0;
     animation-fill-mode: forwards;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @keyframes sale-offer-offer {
@@ -143,6 +146,18 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     width: 150px;
+}
+
+.recommended {
+    padding: 10px;
+}
+
+.recommended__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .course-card {
